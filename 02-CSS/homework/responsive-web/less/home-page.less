@@ -106,6 +106,63 @@
   }
 }
 
+//---------------------------- formulario --------------------
+.form {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(226, 221, 221);
+  padding: 20px;
+
+  h3 {
+    padding-bottom: 1rem;
+  }
+
+  div {
+    width: 80%;
+
+    p {
+      width: 100%;
+      padding: 5px;
+      text-align: right;
+    }
+
+    span {
+      width: 15%;
+    }
+
+    input {
+      width: 85%;
+    }
+  }
+}
+
+#formCheck {
+  width: 5%;
+}
+
+#formBtn {
+  background: #041e6b;
+  color: white;
+  font-weight: bold;
+  width: 20%;
+  height: 100%;
+  border: 0;
+  border-radius: 5px;
+}
+
+#formBtn:hover {
+  background: #8a98c2;
+  color: black;
+}
+
+#formMessage {
+  width: 100%;
+}
+
+#pFormBtn {
+  height: 5rem;
+  text-align: right;
+}
 
 //--------------------------- MOBILE VERSION (hasta 500px) ------------------------
 
@@ -115,7 +172,7 @@
   a {
     font-size: 1.2rem;
     padding: 10px;
-}
+  }
   .home {
 
     .intro {
@@ -219,6 +276,11 @@
     }
   }
 
+  .form {
+    display: none;
+  }
 
 }
+
+
 

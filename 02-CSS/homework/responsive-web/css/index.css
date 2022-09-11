@@ -32,17 +32,6 @@
     color: black;
   }
 }
-#aDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0 0 0;
-}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -210,6 +199,22 @@ h1 {
 }
 #nav {
   background-color: #F6F6F6;
+  display: unset;
+}
+#aDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #F6F6F6;
+}
+#h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 0 0;
+  background-color: #F6F6F6;
 }
 a {
   font-size: 1.6rem;
@@ -303,6 +308,52 @@ footer {
   height: auto;
   border-radius: 10px;
 }
+.form {
+  display: flex;
+  justify-content: center;
+  background-color: #e2dddd;
+  padding: 20px;
+}
+.form h3 {
+  padding-bottom: 1rem;
+}
+.form div {
+  width: 80%;
+}
+.form div p {
+  width: 100%;
+  padding: 5px;
+  text-align: right;
+}
+.form div span {
+  width: 15%;
+}
+.form div input {
+  width: 85%;
+}
+#formCheck {
+  width: 5%;
+}
+#formBtn {
+  background: #041e6b;
+  color: white;
+  font-weight: bold;
+  width: 20%;
+  height: 100%;
+  border: 0;
+  border-radius: 5px;
+}
+#formBtn:hover {
+  background: #8a98c2;
+  color: black;
+}
+#formMessage {
+  width: 100%;
+}
+#pFormBtn {
+  height: 5rem;
+  text-align: right;
+}
 @media screen and (max-width: 500px) {
   a {
     font-size: 1.2rem;
@@ -387,5 +438,8 @@ footer {
     width: 100%;
     height: auto;
     border-radius: 10px;
+  }
+  .form {
+    display: none;
   }
 }
