@@ -60,13 +60,15 @@ function buildToDo(todo, index) {
   // Tu código acá:
   let toDoShell = document.createElement("div");
   toDoShell.className = "toDoShell";
+  //toDoShell.setAtrtibute('class', 'miBoton')  || cambia el atributo "clase" al valor "miBoton". Otra opcion de hacer los mismo
 
   let toDoText = document.createElement("span");
   toDoText.innerHTML = todo.description;
   toDoText.id = index;
+  //toDoText.setAttribute('id', index); Otra forma de hacer lo mismo
   toDoText.addEventListener("click", completeToDo)
 
-  if (todo.complete === true) toDoText.className = "completeText";
+  if (todo.complete) toDoText.className = "completeText";
   toDoShell.appendChild(toDoText);
 
   return toDoShell;
@@ -79,8 +81,14 @@ function buildToDo(todo, index) {
 
 function buildToDos(toDos) {
   // Tu código acá:
-  let arr = toDos.map(buildToDo);
+  // let arr = toDos.map(buildToDo);
+  // return arr;
+
+  let arr = toDos.map(function(elemento, index){
+      return buildToDo(elemento, index);
+  })
   return arr;
+
 }
 
 
@@ -101,6 +109,11 @@ function displayToDos() {
   items.forEach(function(elemento) {
     toDoContainer.appendChild(elemento);
   });
+
+  //CODE REVIEW ----- (funciona de ambas formas)
+  /*items.map(function(elemento) {
+    toDoContainer.appendChild(elemento)
+  })*/
 }
 
 
@@ -127,8 +140,7 @@ function addToDo() {
 //   2) Agregarle un 'click' event listener, pasándole la función 'addToDo' como callback
 
 // Tu código acá:
-const agregarBoton = document.getElementById("addButton");
-agregarBoton.addEventListener("click", addToDo);
+document.getElementById("addButton").addEventListener("click", addToDo);
 
 
 // La función completeToDo se va a ejecutar cuando queramos completar un todo
@@ -151,6 +163,7 @@ function completeToDo(event) {
   toDoItems[index].completeToDo();
   displayToDos();
 }
+
 
 // Una vez que llegaste a este punto verificá que todos los tests pasen
 
