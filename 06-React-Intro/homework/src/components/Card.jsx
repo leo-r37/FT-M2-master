@@ -9,8 +9,8 @@ export default function Card({max, min, name, img, onClose}) {
       <div>
         <p>max: {max}</p>
         <p>min: {min}</p>
-        <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt=""/>
       </div>
+      <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt=""/>
     </div>
     )
 };

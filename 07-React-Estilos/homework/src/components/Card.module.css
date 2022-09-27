@@ -1,0 +1,55 @@
+.container {
+    border: 1px solid rgb(189, 188, 188);
+    border-radius: 4px;
+    width: 20rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button {
+    background-color: rgb(233, 67, 67);
+    border: none;
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    margin: 10px;
+}
+
+.dataContainer {
+    display: grid;
+    grid-template-areas: "maxName minName img"
+                         "maxData minData img";
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+.maxName {
+    grid-area: maxName;
+    align-self: end;
+}
+
+.maxData {
+    grid-area: maxData;
+}
+
+.minName {
+    grid-area: minName;
+    align-self: end;
+}
+
+.minData {
+    grid-area: minData;
+}
+
+.img {
+    grid-area: img;
+    align-self: center;
+}
