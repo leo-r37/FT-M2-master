@@ -7,7 +7,7 @@ export default function Card({max, min, name, img, onClose}) {
     <div className={s.container}>
 
       <div className={s.buttonContainer}>
-      <button onClick={onClose} className={s.button}>X</button>
+      <button onClick={onClose} className={s.button}>✖</button>
       </div>
 
       <div>
