@@ -1,0 +1,21 @@
+.button {
+    background-color: rgb(60, 74, 112);
+    color: rgb(59, 207, 1);
+    padding: 5px;
+    border: 1px solid rgb(59, 207, 1);
+    border-radius: 5px;
+    margin: 3px;
+}
+
+.input {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 3px;
+    border: 1px solid gray;
+
+}
+
+.input:focus-visible {
+    border: 1px solid rgb(255, 196, 0);
+    outline: 2px solid rgb(255, 196, 0);
+}
