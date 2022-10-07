@@ -17,6 +17,16 @@ p.danger {
   font-size: 10px;
 }
 
+span.danger {
+  color: red;
+  font-size: 10px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid red;
+  border-radius: 100px;
+  background-color: rgba(255, 204, 204, 0.993);
+}
+
 input.danger {
   border: 2px solid red;
 }
