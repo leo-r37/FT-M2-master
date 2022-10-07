@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.cityContainer {
+    border: 1px solid grey;
+    border-radius: 1rem;
+    margin-top: 20px;
+    padding: 20px;
+    width: 80%;
+    background-color: #414b50;
+    color: #fff;
+}
+
+.maxContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.maxContainer p {
+    margin: 20px;
+}
+
+.minContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.minContainer p {
+    margin: 10px;
+}
