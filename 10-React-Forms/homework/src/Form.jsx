@@ -8,7 +8,8 @@ export function validate(input) {
     errors.username = 'Username is required';
   } else if (!/\S+@\S+\.\S+/.test(input.username)) {
     errors.username = 'Username is invalid';
-  } else if (!input.password) {
+  }
+  if (!input.password) {
     errors.password = 'Password is required';
   } else if (!/(?=.*[0-9])/.test(input.password)) {
     errors.password = 'Password is invalid';
@@ -82,7 +83,8 @@ export default function  Form() {
           <span className='danger'>{errors.password}</span>
         )}
       </div>
-      <input disabled={valid} type='submit' value='Send' />
+      <input disabled={Object.keys(errors).length !== 0 || !input.password || !input.username} type='submit' value='Send' />
     </form>
   )
 }
+
