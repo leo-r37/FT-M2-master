@@ -1,0 +1,32 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.container {
+    background-color: #263238;
+    width: 80%;
+    display: flex;
+    border-radius: 10px;
+    color: #fff;
+    padding: 20px;
+    
+}
+
+.imgContainer {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 600px;
+}
+
+.dataContainer {
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    padding: 20px;
+}

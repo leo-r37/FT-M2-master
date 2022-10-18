@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getMovieDetail } from '../../actions/index';
 
-import './Movie.css';
+import s from './Movie.module.css';
 
 class Movie extends React.Component {
 
@@ -13,24 +13,24 @@ class Movie extends React.Component {
 
     render() {
         return (
-            <div className="movie-detail">
-
-           
+            <div className={s.body}>
+                <div className={s.container}>          
                 
-                {console.log(this.props.movie)}
-                <div><img src={this.props.movie.Poster} alt='Poster'/></div>
-                <div>
-                    <h4>{this.props.movie.Title}</h4>
-                    <p>{this.props.movie.Year} | {this.props.movie.Rated} </p> 
-                    <p>Reparto: {this.props.movie.Actors}</p>
-                    <p>Duración: {this.props.movie.Runtime} Género: {this.props.movie.Genre}</p>
-                    <p>Sinópsis: {this.props.movie.Plot}</p>
-                    <p>Dirección: {this.props.movie.Director}</p>
-                    <p>Escritores: {this.props.movie.Writer}</p>
+                    <div className={s.imgContainer}>
+                        <img src={this.props.movie.Poster} alt='Poster'/>
+                    </div>
+
+                    <div className={s.dataContainer}>
+                        <h4>{this.props.movie.Title}</h4>
+                        <p>{this.props.movie.Year} | {this.props.movie.Rated} </p> 
+                        <p>Reparto: {this.props.movie.Actors}</p>
+                        <p>Duración: {this.props.movie.Runtime} Género: {this.props.movie.Genre}</p>
+                        <p>Sinópsis: {this.props.movie.Plot}</p>
+                        <p>Dirección: {this.props.movie.Director}</p>
+                        <p>Escritores: {this.props.movie.Writer}</p>
+                    </div>
+
                 </div>
-
-                
-
             </div>
         );
     }
