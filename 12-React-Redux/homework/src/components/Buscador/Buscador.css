@@ -13,3 +13,23 @@
 .label {
     padding-right: 10px;
 }
+
+li {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+li button {
+    font-size: 1rem;
+    border-radius: 20%;
+    border: 1px solid gray;
+    background-color: #fff;
+    padding: 5px;
+    margin: 5px;
+}
+
+li button:hover {
+    background-color: rgb(214, 212, 212);
+    border: 1px solid #fff;
+}

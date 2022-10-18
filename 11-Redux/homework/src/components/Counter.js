@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { increment, decrement } from '../actions';
 
 class Counter extends Component {
@@ -18,11 +18,11 @@ class Counter extends Component {
         return (
             <p>
                 Clickeado: {this.props.count} veces
-                <button onClick={() => {/* Completar */ }}>
-                    + {/* Incremeta */}
+                <button onClick={(increment) => {useDispatch(increment)}}>
+                    + 
                 </button>
-                <button onClick={() => {/* Completar */ }}>
-                    -  {/* Decrementa */}
+                <button onClick={(decrement) => {useDispatch(decrement)}}>
+                    -  
                 </button>
                  {/* Si quieres hacer los extra credit puede descomentar las lineas de abajo */}
                 {/* <button onClick={this.incrementIfOdd}>
