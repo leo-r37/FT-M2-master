@@ -5,8 +5,10 @@ const Timer = () => {
 
   const toggle = () => setActive(!active);
   const reset = () => {
+    let input = document.getElementById('input')
     setSeconds(0);
     setActive(false);
+    input.value = 0;
   }
   const changeType = () => {
     type === 'Counter' ? setType('Countdown') : setType('Counter')
@@ -63,7 +65,7 @@ const Timer = () => {
       <button className="button" onClick={changeType}>
           {type}
       </button>
-      {type === 'Countdown' && <input type="number" ref={myRef} onChange={addSeconds} placeholder="Ingresa Segundos" autoComplete="off"/>}
+      {type === 'Countdown' && <input id='input' type="number" ref={myRef} onChange={addSeconds} placeholder="Ingresa Segundos" autoComplete="off"/>}
     </div>
   );
 };
