@@ -26,6 +26,10 @@
   border-style: groove;
 }
 
+.button:hover {
+  background-color: #bdbdbd;
+}
+
 .button:focus {
   outline-width: 0;
 }
