@@ -11,7 +11,8 @@ const Timer = () => {
     input.value = 0;
   }
   const changeType = () => {
-    type === 'Counter' ? setType('Countdown') : setType('Counter')
+    type === 'Counter' ? setType('Countdown') : setType('Counter');
+    setActive(false);
   }
   const addSeconds = () => {
     let ref = myRef.current.value
