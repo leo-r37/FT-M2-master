@@ -6,6 +6,10 @@ import './Users.css';
 
 export class Users extends Component {
 
+  componentDidMount() {
+    this.props.getAllUsers();
+  } 
+
   render() {
     return (
       <div className="details">
@@ -18,6 +22,20 @@ export class Users extends Component {
               <th>Usuario</th>
               <th>Ver</th>
             </tr>
+
+           
+              {this.props.users.map(u => {
+                return (
+                  <tr key={u.id}>
+                    <td>{u.name}</td>
+                    <td>{u.username}</td>
+                    <td>
+                      <Link to={`/users/${u.id}/posts`} className='button'>Posts</Link>
+                    </td>
+                  </tr>
+                )
+              })}
+            
           </thead>
           <tbody>
            
@@ -28,5 +46,17 @@ export class Users extends Component {
   }
 }
 
-export default Users
+const mapStateToProps = (state) => {
+  return {
+    users: state.users
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getAllUsers: () => dispatch(getAllUsers())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Users);
 

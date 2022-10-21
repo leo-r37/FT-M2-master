@@ -7,18 +7,18 @@ import './Navbar.css';
 export default function NavBar() {
     return (
         <header className="navbar">
-           <div>
-          <NavLink exact to="/" >
-                <img id="logoHenry" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" />
-            </NavLink>    
+            <div>
+                <NavLink exact to="/" >
+                    <img id="logoHenry" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" />
+                </NavLink>    
             </div>
             <nav>
                 <ul className="list">
                     <li className="list-item">
-                        
+                        <NavLink exact to='/'>Home</NavLink>
                     </li>
                     <li className="list-item">
-                    
+                        <NavLink exact to ='/filter/posts'>Posts</NavLink>
                     </li>
                 </ul>
           </nav>
